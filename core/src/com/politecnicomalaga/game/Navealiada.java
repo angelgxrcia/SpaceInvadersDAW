@@ -29,7 +29,7 @@ public class Navealiada {
 
 
         if(contador >= 30){
-            new Disparo(posX, posY, false, 3);
+            RafagaDisparos.nuevoDisparo(posX, posY, false, 3);
             contador = 0;
         }
         contador++;

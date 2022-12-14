@@ -9,8 +9,8 @@ import java.util.List;
 public class RafagaDisparos {
 
     public RafagaDisparos(){
-
-
+        disparoList = new ArrayList<>();
+        (new Disparo(-9999, -9999, false, 0)).Start();
     }
 
     public static void pintarseTodos(SpriteBatch miSB){
@@ -31,9 +31,10 @@ public class RafagaDisparos {
         }
     }
 
-    public static void start(){
-        disparoList = new ArrayList<>();
-        (new Disparo(-9999, -9999, false, 0)).Start();
+    public static Disparo nuevoDisparo(float posX, float posY, boolean esEnemiga, float velocidad){
+        Disparo d = new Disparo(posX, posY, esEnemiga, velocidad);
+        disparoList.add(d);
+        return d;
     }
 
     public static void destruirme(Disparo d){

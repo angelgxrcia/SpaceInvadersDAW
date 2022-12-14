@@ -27,6 +27,18 @@ public class Disparo {
     static private float ScreenHeight = 0;
 
 
+
+    public Disparo (float posX, float posY, boolean esEnemiga, float velocidad) {
+        this.posX = posX;
+        this.posY = posY;
+        enemigo = esEnemiga;
+        if(enemigo)
+            imagen = new Texture(SPRITE_DISPARO_ENEMIGO);
+        else
+            imagen = new Texture(SPRITE_DISPARO_AMIGO);
+    }
+
+
     public static void Start(){
         ScreenHeight = Gdx.graphics.getHeight();
         ScreenWidth = Gdx.graphics.getWidth();
@@ -47,16 +59,6 @@ public class Disparo {
 
     public void pintarse(SpriteBatch miSB) {
         miSB.draw(imagen, posX - 5 /*Para que esté centrado en la nave*/, posY + 40,10,10);
-    }
-
-    public Disparo (float posX, float posY, boolean esEnemiga, float velocidad) {
-        this.posX = posX;
-        this.posY = posY;
-        enemigo = esEnemiga;
-        if(enemigo)
-            imagen = new Texture(SPRITE_DISPARO_ENEMIGO);
-        else
-            imagen = new Texture(SPRITE_DISPARO_AMIGO);
     }
 
 

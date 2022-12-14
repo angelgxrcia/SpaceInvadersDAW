@@ -27,7 +27,6 @@ public class Controlador {
         navealiada = new Navealiada(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight()/10,(short)Gdx.graphics.getWidth());
         naveenemiga = new Nave_Enemiga(Gdx.graphics.getWidth()/2,Gdx.graphics.getHeight()-60,(short)Gdx.graphics.getWidth());
         rafagaDisparos = new RafagaDisparos();
-        rafagaDisparos.start();
     }
 
    public void render(){                                       //dibujamos todo en el batch y controlamos el movimiento de la nave
